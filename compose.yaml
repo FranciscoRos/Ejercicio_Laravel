@@ -25,7 +25,7 @@ services:
             - mysql
     mysql:
         image: 'mysql/mysql-server:8.0'
-        ports:
+        ports: #PUERTO REAL/ PUERTO INTERNO
             - '${FORWARD_DB_PORT:-3307}:3306'
         environment:
             MYSQL_ROOT_PASSWORD: '${DB_PASSWORD}'
