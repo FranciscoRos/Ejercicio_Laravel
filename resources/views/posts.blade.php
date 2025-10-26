@@ -1,17 +1,25 @@
-<html lang="es">
-    <head>
-        <script src="https://cdn.tailwindcss.com"></script>
-    </head>
-    <h1>Bienvenido a los post</h1>
+@extends('layouts.app')
+@section('content')
+<h2>Contenido de Posts</h2>
+<p>Aquí puedes ver todos los posts disponibles.</p>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum deleniti provident aliquid dolore alias enim, officiis nisi a maxime nihil laboriosam ea autem, mollitia et unde illum hic sed molestias.</p>
+<p>Más contenido de ejemplo para llenar la página de posts.</p>
+<p>Buscaste el Post con id: {{  $id}} </p>
+@endsection
 
-    {{-- Verificamos si existe el argumento 'id' --}}
-    @if(isset($id))
-        <h2>Has llegado al post con ID: {{ $id }}</h2>
-        {{-- Aquí podrías mostrar más información del post --}}
-    @else
-        <h2>Llegaste a post sin argumentos <?=$id?> </h2>
-        {{-- Mensaje para cuando no hay argumentos --}}
-    @endif
-<?=$id?> 
-    {{-- Puedes agregar más lógica Blade aquí según lo que necesites --}}
-</html>
+@section('header')
+    <h1 class="text-3xl font-bold underline">
+        Bienvenido a la sección de Posts
+    </h1>
+    @section('title')
+        Probando plantillas
+    @endsection
+    @section('tituloReal')
+        Este es el título Real de los Posts
+    @endsection
+@endsection
+
+
+@section('footer')
+    Footer de los Posts
+@endsection
