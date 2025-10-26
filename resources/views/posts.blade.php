@@ -15,11 +15,24 @@
         Probando plantillas
     @endsection
     @section('tituloReal')
-        Este es el título Real de los Posts
+        Este es el título Real de los Posts 
     @endsection
+
+    @push('tablita')
+    Este es el contenido de la tablita<br >
+        
+    @endpush
+    @push('tablita')
+    Este es el contenido de la tablita2<br >
+        
+    @endpush
 @endsection
 
 
 @section('footer')
     Footer de los Posts
 @endsection
+@push('tablita')
+    Este es el contenido de la tablita3<br >
+        
+    @endpush
